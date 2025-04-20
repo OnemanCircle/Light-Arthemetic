@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flash Mental Arithmetic</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Flash Mental Arithmetic</h1>
+    <p>Level: <span id="level">1</span></p>
+    <p id="expression"></p>
+    <input type="number" id="answer" placeholder="Enter your answer" />
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="result"></p>
+    <div>
+      <button onclick="changeLevel(-1)">Previous</button>
+      <button onclick="changeLevel(1)">Next</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
