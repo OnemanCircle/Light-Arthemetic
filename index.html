@@ -4,21 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Flash Mental Arithmetic</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <h1>Flash Mental Arithmetic</h1>
+    
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    
     <p>Level: <span id="level">1</span></p>
+    <p>Score: <span id="score">0</span></p>
+    <p>Best: <span id="bestScore">0</span></p>
+    <p>Time Left: <span id="timer">15</span> seconds</p>
+
     <p id="expression"></p>
     <input type="number" id="answer" placeholder="Enter your answer" />
-    <button onclick="checkAnswer()">Submit</button>
+    
+    <div class="btn-row">
+      <button onclick="checkAnswer()">Submit</button>
+      <button onclick="tryAgain()">Try Again</button>
+    </div>
+
     <p id="result"></p>
-    <div>
+
+    <div class="btn-row">
       <button onclick="changeLevel(-1)">Previous</button>
       <button onclick="changeLevel(1)">Next</button>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
